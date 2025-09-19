@@ -165,28 +165,9 @@ curl -X POST \
 
 ### Environment Variables
 
-The application supports the following environment variables:
+The application supports the following environment variables in the `server/.env` file:
 
 - `FRONTEND_IP`: This is required by CORS. (example: https://myproject.com)
-
-
-### Frontend Configuration
-
-Frontend configuration is managed through `src/config.ts`:
-
-```typescript
-export const config = {
-  apiUrl: process.env.VITE_API_URL || 'https://localhost:443',
-  maxFileSize: 50 * 1024 * 1024, // 50MB
-  allowedTypes: [
-    'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
-    'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
-    'application/vnd.openxmlformats-officedocument.presentationml.presentation',
-    'application/pdf',
-    'text/markdown'
-  ]
-};
-```
 
 ## Building for Production
 
