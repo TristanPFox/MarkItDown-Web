@@ -49,7 +49,7 @@ version: '3.8'
 
 services:
   markitdown-web:
-    image: ghcr.io/TristanPFox/markitdown-web:latest
+    image: ghcr.io/tristanpfox/markitdown-web:latest
     ports:
       - "443:443"
     environment:
@@ -75,7 +75,7 @@ docker run -d \
   -p 443:443 \
   -e FRONTEND_IP=https://localhost:443 \
   --restart unless-stopped \
-  ghcr.io/TristanPFox/markitdown-web:latest
+  ghcr.io/tristanpfox/markitdown-web:latest
 ```
 
 ## Development Setup
@@ -90,7 +90,7 @@ docker run -d \
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/TristanPFox/MarkItDown-Web.git
+git clone https://github.com/tristanpfox/markitdown-web.git
 cd MarkItDown-Web
 ```
 

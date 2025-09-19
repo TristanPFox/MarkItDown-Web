@@ -46,7 +46,7 @@ jobs:
         context: .
         file: ./Dockerfile
         push: true
-        tags: ghcr.io/TristanPFox/MarkItDown-Web:latest
+        tags: ghcr.io/tristanpfox/markitdown-web:latest
 
     - name: Prune Docker system
       run: docker system prune -af
