@@ -170,12 +170,12 @@ export function HomePage() {
                         <Center>
                           <Stack gap={4} align="center">
                             <ThemeIcon
-                              size={32}
+                              size={48}
                               radius="md"
                               variant="light"
                               color={format.color}
                             >
-                              <format.icon size={16} />
+                              <format.icon size={32} />
                             </ThemeIcon>
                             <Text size="xs" fw={500} ta="center">{format.title}</Text>
                           </Stack>

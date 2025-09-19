@@ -97,13 +97,17 @@ cd MarkItDown-Web
 2. Set up the frontend:
 ```bash
 cd client
-npm install
+npm i
 ```
 
-3. Set up the backend:
+3. Create a `.env` file in the client directory and insert:
 ```bash
-cd ../server
-uv venv
+VITE_API_TARGET="https://localhost:443"
+```
+
+4. Set up the backend:
+```bash
+cd server
 uv sync
 ```
 
@@ -191,16 +195,6 @@ export const config = {
 ```bash
 cd client
 npm run build
-```
-
-### Backend Deployment
-
-The backend is designed to run with any WSGI server. For production deployment:
-
-```bash
-cd server
-uv sync
-uv run python app.py
 ```
 
 ## Contributing

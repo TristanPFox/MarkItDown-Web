@@ -32,8 +32,6 @@ origins = []
 origins.append(os.getenv("https://project.domain.com"))
 if os.getenv("FRONTEND_IP"):
     origins.append(os.getenv("FRONTEND_IP"))
-if os.getenv("LOCAL_IP"):
-    origins.append(os.getenv("LOCAL_IP"))
 
 app.add_middleware(
     CORSMiddleware,

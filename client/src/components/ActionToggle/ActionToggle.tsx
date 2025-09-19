@@ -25,9 +25,9 @@ export function ActionToggle() {
           }}
         >
           {computedColorScheme === 'light' ? (
-            <IconMoon size={18} stroke={1.5} />
+            <IconMoon size={28} stroke={1.5} />
           ) : (
-            <IconSun size={18} stroke={1.5} style={{ color: '#fd7e14' }} />
+            <IconSun size={28} stroke={1.5} style={{ color: '#fd7e14' }} />
           )}
         </ActionIcon>
       </Tooltip>
