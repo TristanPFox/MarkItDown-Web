@@ -6,7 +6,7 @@ import path from 'path';
 export default defineConfig(({ mode }) => {
   // Load environment variables
   const env = loadEnv(mode, process.cwd());
-  const proxyTarget = env.VITE_API_TARGET || 'https://localhost:8080';
+  const proxyTarget = env.VITE_API_TARGET || '';
 
   return {
     plugins: [react(), tsconfigPaths()],

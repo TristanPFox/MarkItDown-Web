@@ -55,7 +55,7 @@ export const uploadFileForConversion = async (file: File): Promise<UploadRespons
     formData.append('file', file);
 
     // Get the API base URL from config or environment
-    const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || window.location.origin;
+    const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || '';
     
     const response = await axios.post(`${apiBaseUrl}/api/convert`, formData, {
       headers: {
