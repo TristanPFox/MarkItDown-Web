@@ -11,13 +11,13 @@ export default defineConfig(({ mode }) => {
   return {
     plugins: [react(), tsconfigPaths()],
     server: {
-      proxy: proxyTarget ? {
+      proxy: {
         '/api': {
           target: proxyTarget,
           changeOrigin: true,
           secure: false, // disable certificate verification for dev
         },
-      } : undefined,
+      },
     },
     test: {
       globals: true,

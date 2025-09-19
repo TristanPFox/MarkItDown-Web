@@ -13,7 +13,6 @@ from dotenv import load_dotenv
 from markitdown import MarkItDown
 import uvicorn
 import pytz
-
 import os
 
 from api.models import MessageResponse, FileDownloadResponse
@@ -30,6 +29,7 @@ app.state.mission_gen_time = datetime.now(local_tz)
 app.state.initial_gen = False
 
 origins = []
+origins.append(os.getenv("https://project.domain.com"))
 if os.getenv("FRONTEND_IP"):
     origins.append(os.getenv("FRONTEND_IP"))
 if os.getenv("LOCAL_IP"):
@@ -45,6 +45,7 @@ app.add_middleware(
 
 # Path to the React build folder
 dist_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "../dist"))
+
 
 # =========== Helper Functions ============
 
@@ -121,9 +122,7 @@ async def convert_file(background_tasks: BackgroundTasks, file: UploadFile = Fil
             detail=f"Error creating markdown file: {str(e)}",
         )
 
-
 # ============ Webhosting ============
-
 
 # Serve the React app
 @app.get("/{full_path:path}")
@@ -138,7 +137,6 @@ async def serve_react_app(full_path: str):
         return FileResponse(index_file)
 
     return {"error": "index.html not found"}
-
 
 # ============ Run App ============
 

@@ -128,7 +128,7 @@ export function HomePage() {
                   variant="gradient"
                   gradient={{ from: 'primary.6', to: 'accent.5' }}
                 >
-                  <IconSparkles size={rem(24)} />
+                  <IconSparkles size={24} />
                 </ThemeIcon>
                 <Title
                   order={1}
@@ -175,7 +175,7 @@ export function HomePage() {
                               variant="light"
                               color={format.color}
                             >
-                              <format.icon size={rem(16)} />
+                              <format.icon size={16} />
                             </ThemeIcon>
                             <Text size="xs" fw={500} ta="center">{format.title}</Text>
                           </Stack>
@@ -235,7 +235,7 @@ export function HomePage() {
                     <Card p="md" bg="primary.0" withBorder={false} radius="md">
                       <Group gap="sm" justify="center">
                         <ThemeIcon size="sm" variant="light" color="primary">
-                          <IconSparkles size={rem(12)} />
+                          <IconSparkles size={12} />
                         </ThemeIcon>
                         <Text size="sm" fw={500} c="primary">
                           Converting your document...
@@ -253,7 +253,7 @@ export function HomePage() {
                     <Stack gap="lg">
                       <Group gap="sm" justify="center">
                         <ThemeIcon size={32} radius="md" variant="light" color="success">
-                          <IconMarkdown size={rem(18)} />
+                          <IconMarkdown size={18} />
                         </ThemeIcon>
                         <Title order={2} size="h3" fw={600}>Converted Markdown</Title>
                       </Group>
@@ -375,7 +375,7 @@ export function HomePage() {
                 MarkItDown
               </Badge>
               <Text size="sm" c="dimmed">
-                 WebUI by
+                WebUI by
               </Text>
               <Badge
                 variant="light"

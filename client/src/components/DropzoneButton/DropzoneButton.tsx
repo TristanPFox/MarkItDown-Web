@@ -99,13 +99,13 @@ export function DropzoneButton({ onFileConverted, onUploadStart, onUploadEnd }: 
           <Stack gap="lg" align="center" pt="md">
             <Dropzone.Accept>
               <ThemeIcon size={rem(48)} radius="xl" variant="light" color="success">
-                <IconDownload size={rem(24)} />
+                <IconDownload size={24} />
               </ThemeIcon>
             </Dropzone.Accept>
 
             <Dropzone.Reject>
               <ThemeIcon size={rem(48)} radius="xl" variant="light" color="red">
-                <IconX size={rem(24)} />
+                <IconX size={24} />
               </ThemeIcon>
             </Dropzone.Reject>
 
@@ -116,7 +116,7 @@ export function DropzoneButton({ onFileConverted, onUploadStart, onUploadEnd }: 
                 </ThemeIcon>
               ) : (
                 <ThemeIcon size={rem(48)} radius="xl" variant="light" color="primary">
-                  <IconCloudUpload size={rem(24)} />
+                  <IconCloudUpload size={24} />
                 </ThemeIcon>
               )}
             </Dropzone.Idle>
