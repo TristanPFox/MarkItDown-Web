@@ -1,0 +1,139 @@
+/* Global CSS custom properties for adaptive color schemes */
+:root {
+  /* Light mode colors */
+  --card-bg: #ffffff;
+  --surface-bg: #f8f9fa;
+  --border-color: #e9ecef;
+  --text-primary: #212529;
+  --text-secondary: #6c757d;
+  --text-muted: #868e96;
+  
+  /* Dynamic accent colors (more vibrant in light mode) */
+  --accent-primary: var(--mantine-color-primary-6);
+  --accent-secondary: var(--mantine-color-accent-5);
+  --accent-success: var(--mantine-color-success-6);
+}
+
+[data-mantine-color-scheme='dark'] {
+  /* Dark mode colors - softer for eye strain reduction */
+  --card-bg: #25262b;
+  --surface-bg: #1a1b1e;
+  --border-color: #373a40;
+  --text-primary: #f8f9fa;
+  --text-secondary: #adb5bd;
+  --text-muted: #6c7583;
+  
+  /* Dynamic accent colors (softer in dark mode) */
+  --accent-primary: var(--mantine-color-soft-6);
+  --accent-secondary: var(--mantine-color-accent-7);
+  --accent-success: var(--mantine-color-success-7);
+}
+
+/* Smooth transitions for color scheme changes */
+* {
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Body styles for better default appearance */
+body {
+  background-color: var(--surface-bg);
+  color: var(--text-primary);
+}
+
+/* Override some Mantine default colors for better consistency */
+.mantine-Card-root {
+  background-color: var(--card-bg) !important;
+  border-color: var(--border-color) !important;
+}
+
+.mantine-Paper-root {
+  background-color: var(--card-bg) !important;
+  border-color: var(--border-color) !important;
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--surface-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* Loading animation improvements */
+@keyframes gentle-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.gentle-pulse {
+  animation: gentle-pulse 2s ease-in-out infinite;
+}
+
+/* Focus styles for better accessibility */
+*:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 2px;
+}
+
+/* Improved text selection */
+::selection {
+  background-color: var(--accent-primary);
+  color: white;
+}
+
+/* Fix for potential SVG icon stroke gaps */
+/* Hide any unwanted vertical line strokes in icons */
+svg path[d="M12 4l0 12"] {
+  display: none !important;
+}
+
+/* Alternative fix for stroke-only paths that might create gaps */
+svg path[d*="M12 4"] {
+  stroke: transparent !important;
+}
+
+/* General SVG icon improvements */
+svg path[stroke="currentColor"] {
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Ensure icons are properly contained */
+.tabler-icon, [data-testid*="icon"] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Toast container positioning */
+.Toastify__toast-container {
+  z-index: 9999;
+}
+
+/* Responsive design helpers */
+@media (max-width: 768px) {
+  .responsive-text-sm {
+    font-size: 0.875rem !important;
+  }
+  
+  .responsive-spacing-sm {
+    padding: 1rem !important;
+  }
+}
