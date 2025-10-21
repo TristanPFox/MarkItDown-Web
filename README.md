@@ -2,6 +2,8 @@
 
 A modern web interface for Microsoft's MarkItDown document conversion library. Transform any document into clean, readable Markdown through an intuitive drag-and-drop interface.
 
+![Screenshot of webui](https://imgur.com/uvxi7lRl.png)
+
 ## Overview
 
 MarkItDown Web provides a user-friendly frontend for the powerful MarkItDown library, enabling seamless conversion of various document formats to Markdown. The application features a clean, responsive design with real-time conversion and preview capabilities.
